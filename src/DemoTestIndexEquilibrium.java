@@ -1,3 +1,9 @@
+/*
+Program z podanej tablicy zwraca index takiego element, że suma wszystkich elementów przed nim
+równa się sumie wszystkich elementów po nim. Jeżeli taki element nie istnieje to program zwraca -1.
+Złożoność programu ma wynosić O(n).
+ */
+
 public class DemoTestIndexEquilibrium {
     
     public static void main (String args[]){
@@ -6,27 +12,6 @@ public class DemoTestIndexEquilibrium {
         System.out.println(efficientIndexEquilibrium(tab));
     }
     
-    public static int indexEquilibrium (int [] A){
-        int beforeSum = 0;
-        int afterSum = 0;
-
-        for (int i=1;i<A.length-1;i++){
-            for (int j=0;j<A.length;j++){
-                if (j<i)
-                    beforeSum += A[j];
-                else if (j>i)
-                    afterSum += A[j];
-            }
-            if (beforeSum == afterSum) {
-                return i;
-            } else {
-                beforeSum = 0;
-                afterSum = 0;
-            }
-        }
-        return -1;
-    }
-
     public static int efficientIndexEquilibrium (int []A) {
         if (A.length==0)
             return -1;
