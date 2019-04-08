@@ -24,14 +24,10 @@ public class sumMaxSequence {
         TreeSet<Long> treeSet = new TreeSet<>();
         long sum = 0;
         for (int k = 0; k < A.length-1; k++) {
-            //System.out.println("K = " + k);
             for (int l = A.length-1; l > 0 + k; l--) {
-                //System.out.println("L = " + l);
                 for (int i = k; i <= l; i++) {
-                    //System.out.println("I = " + i);
                     sum += A[i];
                 }
-                //System.out.println("Suma = " + sum);
                 treeSet.add(sum);
                 sum = 0;
             }
