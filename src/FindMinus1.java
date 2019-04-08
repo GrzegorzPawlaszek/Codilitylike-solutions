@@ -1,7 +1,7 @@
 /*
 Mając daną tablicę, tak długo wykonywać operację, aż natrafimy na liczbę -1.
 Zakładamy, że rozpoczynamy od elementu 0.
-Zakłądamy, że dla testowych danych zawsze możemy wykonaćoperację.
+Zakładamy, że dla testowych danych zawsze możemy wykonać operację.
 Wykonujemy następującą operację: array[0] -> array[array[index]].
 Program powininen zwrócić liczbę operacji.
 
